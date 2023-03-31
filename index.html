@@ -86,16 +86,24 @@
         .mybtn>button {
             margin-right: 10px;
         }
-
-
-
     </style>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+                let number = data['temp']
+                $('#temp').text(number)
+  
+
+            })
+        })
+    </script>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>깃헙 넘 느렷</h1>
-        <button>코딩 머리터짐</button>
+        <div>현재 서울의 날씨 : <span id="temp">20</span>도</div>
+        <button onclick="hey()">코딩 머리터짐</button>
     </div>
     <div class="mypost">
         <div class="form-floating mb-3">
@@ -133,10 +141,10 @@
                     <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">영화 제목</h5>
-                        <p class="card-text">코멘트ㅡ으으으으으으으으으으으</p>
-                        <p>⭐⭐⭐</p>
-                        <p class="mycomment">여기에 나의 의견을 쓰면 되겠죠</p>
+                        <h5 class="card-title">튜터님</h5>
+                        <p class="card-text">뇌가 멈춰요</p>
+                        <p>⭐</p>
+                        <p class="mycomment">어떡하면 좋나요 ㅋㅋ ㅠㅠ</p>
                     </div>
                 </div>
             </div>
